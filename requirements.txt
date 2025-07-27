@@ -1,0 +1,8 @@
+torch==2.0.1+cpu
+transformers==4.38.0
+sentencepiece
+peft==0.4.0
+PyPDF2
+numpy
+accelerate==0.21.0
+huggingface_hub
