@@ -8,8 +8,9 @@ from peft import PeftModel
 
 def load_model():
     # after Docker build, model lives under /app/model/flan_t5_base
-    tok = AutoTokenizer.from_pretrained("model/flan_t5_base")
-    base = AutoModelForSeq2SeqLM.from_pretrained("model/flan_t5_base")
+    tok = AutoTokenizer.from_pretrained("google/flan-t5-base")
+    base = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-base")
+
     # no LoRA here unless you copy in your adapters the same way
     return tok, base
 
