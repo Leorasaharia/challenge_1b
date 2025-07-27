@@ -13,8 +13,30 @@ In **Round 1B** of the Adobe Hackathon, we build a **CPU-only**, **offline** ser
 3. **Ranks** them by importance.
 4. **Summarizes** each chosen section in concise, bullet-style form.
 5. **Emits** a clean, structured JSON (`challenge1b_final_output.json`) per collection.
+   
+---
 
-All processing must complete in under 60 seconds for 3–5 small documents and the model footprint must stay below 1 GB.
+### Model Used: google/flan-t5-base
+
+#### Type: Instruction-tuned sequence-to-sequence (T5)
+
+#### Size: ~770 M parameters (total disk footprint ≲ 1 GB)
+
+### Key Capabilities:
+
+Instruction following: excels at taking a natural-language prompt (e.g. “Extract the top 5 sections…”) and producing structured outputs.
+
+Text-to-JSON: can be guided to emit valid JSON arrays or objects, making it ideal for your “extracted_sections” step.
+
+Summarization: generates concise, bullet-style summaries for the “subsection_analysis” phase.
+
+### Performance:
+
+CPU-only inference: optimized enough to handle a handful of small PDFs end-to-end in under 60 seconds on a standard x86 CPU.
+
+Fine-tuning friendly:
+
+Supports adapter methods like LoRA for lightweight, fast on-device fine-tuning if you later need to customize for domain-specific phrasing.
 
 ---
 
