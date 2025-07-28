@@ -138,6 +138,8 @@ challenge_1b/
    This will process **collection1**, **collection2**, and **collection3**, writing
    `challenge1b_final_output.json` in each folder.
 
+#### In case of inconvenience to run it locally, you can check the Google Colab link to see the model training process, understand how it worked, and how we approached and solved the problem.
+>>> *https://colab.research.google.com/drive/1N9tZnBsYHxIgV3H3FAH39-Zjaimnwgm5?usp=sharing* 
 ---
 
 ### 🐳 Docker Build & Run
